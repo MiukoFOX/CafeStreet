@@ -1,0 +1,4709 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*::before,*::after{
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+}
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust:100%;
+  -moz-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul,li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/****************************/
+html{
+  overflow-x:hidden;  /*для горизонтального*/
+}
+
+body{
+  overflow-x:hidden;  /*для горизонтального*/
+  font-family: 'Poppins', sans-serif;
+}
+body.lock{
+  overflow: hidden;
+}
+.container{
+  min-height: 100%;
+  width: 100%;
+  max-width: 3000px;
+}
+.first-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background:
+  url('../img/bg_img_hero_top.png') 100% -1px/ 36% auto  no-repeat,
+  url('../img/bg_img_hero_left.png') 1% 102%/ 39% auto  no-repeat;
+  height: 1004px;
+  width: 100%;
+  background-color: #F6EBDA;
+}
+.first-container{
+  width: 80%;
+}
+.header {
+  text-align: center;
+  width: 95%;
+  height: 100px;
+  padding: 3% 0 0 0;
+}
+.header-container{
+  width: 100%;
+  height: 100%;
+}
+.header-body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logo {
+  width: 13%;
+  height: 100%;
+  display: block;
+  background: url(../img/logo_coffe.png)0 0/100% auto no-repeat;
+}
+.header-menu {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1% 0 0 20%;
+}
+.header-list li a{
+  height: 45%;
+  font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+  color: #000;
+  font-weight: 400;
+}
+
+.header-list li a:hover{
+  color: #FF902A;
+}
+.header-burger{
+ display: none;
+}
+
+.search {
+  position: relative;
+  top: 0;
+  left: 9%;
+  background: url(../img/icons_search.png) 15px 50%/10% auto no-repeat;
+  width: 20%;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  color: #929292;
+  font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+  text-align: center;
+  align-items: center;
+  padding: 10px 0 10px 46px;
+  box-shadow: 0px 2px 4px 3px rgba(0,0,0,0.2);
+}
+.basket{
+  position: relative;
+  top: 0;
+  right: -7%;
+}
+.basket button{
+  background: none;
+}
+.basket button img{
+ width: 80%;
+
+}
+.content {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5% 0 0 0;
+}
+.text-content {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3% 0 0 0;
+}
+.title {
+  line-height: 80px;
+  font-weight: 600;
+  font-size: calc(32px + 16 * ((100vw - 320px) / (1440 - 320)));
+  color: #2F2105;
+}
+.title span{
+  color: #FF902A;
+}
+.text {
+  line-height: 30px;
+  width: 75%;
+  font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+  color: #787878;
+  font-weight: 400;
+}
+.buttons {
+  width: 60%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5% 0 0 0;
+}
+.order {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #2F2105;
+  width: 57%;
+  height: 87%;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 500;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  font-size: calc(1px + 13 * ((100vw - 320px) / (1440 - 320)));
+  padding: 0 10% 0 0;
+}
+.order:after{
+  content: '';
+  background: url(../img/Group_2.png) 0 0/100% auto no-repeat;
+  position: absolute;
+  right: 15%;
+  top: 26%;
+  width: 13%;
+  height: 30px;
+}
+.menu {
+  background: none;
+  width: 40%;
+  height: 90%;
+  color: #F4AE26;
+  font-size: calc(1px + 12 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 700;
+}
+.picture {
+  position: relative;
+  width: 55%;
+  height: 100%;
+}
+.picture img{
+  width: 67%;
+  position: relative;
+  bottom: 0;
+  left: 32%;
+}
+.plate-name {
+  position: absolute;
+  top: 10%;
+  left: 23%;
+  background-color: #fff;
+  width: 40%;
+  height: 15%;
+  border-radius: 30px;
+  box-shadow: 0px 0px 0px 6px rgba(255,255,255,0.7);
+  color: #2F2105;
+  font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 600;
+  padding: 2.5% 0 0 9%;
+  z-index: 2;
+}
+.plate-number {
+  position: absolute;
+  top: 95%;
+  left: 35%;
+  background-color: #fff;
+  width: 22%;
+  height: 15%;
+  border-radius: 30px;
+  box-shadow: 0px 0px 0px 6px rgba(255,255,255,0.7);
+  color: #2F2105;
+  font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 600;
+  padding: 2.5% 0 0 8%;
+  z-index: 2;
+}
+.plate-star {
+  position: absolute;
+  top: 30%;
+  left: 83%;
+  background-color: #fff;
+  width: 20%;
+  height: 15%;
+  border-radius: 30px;
+  box-shadow: 0px 0px 0px 8px rgba(255,255,255,0.7);
+  color: #2F2105;
+  font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 700;
+  padding: 2.5% 0 0 5%;
+  z-index: 2;
+}
+.plate-star:after{
+  content: '';
+  background: url(../img/akar-icons_star.png) 0 0/80% auto no-repeat;
+  position: absolute;
+  right: 15%;
+  top: 26%;
+  width: 32px;
+  height: 32px;
+}
+/******/
+.coffee-caps{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  bottom: 260px;
+  left: 6%;
+  width: 88%;
+  height: 550px;
+  z-index: 2;
+}
+.coffee-title{
+  font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+  height: 6%;
+  color: #2F2105;
+  font-weight: 600;
+  padding: 0 0 0 5%;
+}
+.coffee-title span{
+  border-bottom: 4px solid #FF902A;
+  padding-bottom: 0.1%;
+  }
+.caps {
+  display: flex;
+  justify-content: center;
+  border-radius: 65px;
+  width: 100%;
+  height: 72%;
+  background-color: #F9D9AA;
+}
+.card-plate{
+  position: relative;
+  bottom: 18%;
+  width: 92%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.card {
+  color: #2F2105;
+  font-weight: 600;
+  width: 28%;
+  height: 93%;
+  background-color: #fff;
+  box-shadow: 0px 0px 0px 8px rgba(255,255,255,0.7),0px  15px 45px 2px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+.card img{
+  position: relative;
+  width: 92%;
+  bottom: 3%;
+  left: 4%;
+}
+.plate-stars {
+  font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+  position: relative;
+  top: 8%;
+  left: 7%;
+  background-color: #fff;
+  width: 23%;
+  height: 8%;
+  border-radius: 30px;
+  box-shadow: 0px 0px 0px 4px rgba(255,255,255,0.7);
+  padding: 2% 0 0 3%;
+  z-index: 2;
+}
+.plate-stars:after{
+  content: '';
+  background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+  position: absolute;
+  right: 0;
+  top: 13%;
+  width: 32px;
+  height: 32px;
+}
+.card-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-title-text{
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  padding: 5% 0 7% 0;
+}
+.card-coffee {
+  font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 600;
+}
+.bye-coffee {
+  font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 700;
+}
+.card-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.radio-btn {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 0 0 5%;
+}
+.radio-btn input[type=radio] {
+  display: none;
+}
+.hot {
+  width: 35%;
+  height: 75%;
+  color: #FFD28F;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #FFD28F;
+  font-size: calc(0px + 16 * ((100vw - 320px) / (1440 - 320)));
+  padding: 4% 0 0 8%;
+}
+.cold {
+  width: 38%;
+  height: 75%;
+  color: #FFD28F;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #FFD28F;
+  font-size: calc(0px + 16 * ((100vw - 320px) / (1440 - 320)));
+  padding: 4% 0 0 7%;
+}
+.hot.active{
+  color: #FF902A;
+  border-color: #FF902A;
+}
+.cold.active{
+  color: #FF902A;
+  border-color: #FF902A;
+}
+.buy {
+  position: relative;
+  right: 10%;
+  bottom: 7px;
+  background: none;
+  width: 15%;
+}
+/**********/
+.second-block{
+  width: 100%;
+  height: 590px;
+  display: flex;
+  justify-content: center;
+}
+.second-content{
+  width: 80%;
+}
+.coffee-title1{
+  font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+  height: 6%;
+  color: #2F2105;
+  font-weight: 600;
+}
+.coffee-title1 span{
+  border-bottom: 4px solid #FF902A;
+  padding-bottom: 0.1%;
+  }
+.services{
+  position: relative ;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  top: 100px;
+  text-align: center;
+}
+
+.touсh-cap{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 5%;
+  color: #2F2105;
+  font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 600;
+}
+.touсh-cap:before {
+  content: '';
+  background: url(../img/image.png) 0 0/100% auto no-repeat;
+  position:absolute;
+  bottom: 60%;
+  left: 30%;
+  width: 50%;
+  height: 60%;
+}
+.touсh-cap:after{
+  content: 'there are 20+ coffees for you';
+  position:absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 400;
+
+}
+.car{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 5%;
+  color: #2F2105;
+  font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 600;
+}
+.car:before {
+  content: '';
+  background: url(../img/food-truck.png) 0 0/100% auto no-repeat;
+  position:absolute;
+  bottom: 60%;
+  left: 28%;
+  width: 50%;
+  height: 60%;
+}
+.car:after {
+  content: 'Choose delivery service';
+  position:absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 400;
+}
+.just-cap{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 5%;
+  color: #2F2105;
+  font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 600;
+}
+.just-cap:before {
+  content: '';
+  background: url(../img/coffee-cup2.png) 0 0/100% auto no-repeat;
+  position:absolute;
+  bottom: 60%;
+  left: 28%;
+  width: 50%;
+  height: 60%;
+}
+.just-cap:after {
+  content: 'Choose delivery service';
+  position:absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 400;
+  }
+  /************************/
+.third_block {
+  width: 100%;
+  height: 490px;
+  background: url(../img/bg-image.png) 0 0/100% auto no-repeat;
+  display: flex;
+  justify-content: center;
+}
+.third-block-content {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.cofee-img {
+  position: relative;
+  bottom: 20%;
+  left: 6%;
+}
+.cofee-img img{
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #fff;
+  width: 70%;
+  box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.2);
+}
+.third-text {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 7% 0 2% 2%;
+}
+.third-title {
+  width: 35%;
+  font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+  height: 6%;
+  color: #2F2105;
+  font-weight: 600;
+}
+.third-text span{
+  border-bottom: 4px solid #FF902A;
+  padding-bottom: 0.1%;
+}
+.center-text {
+  width: 70%;
+  color: #2F2105;
+  font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 600;
+}
+.third-text-about {
+  line-height: 30px;
+  width: 90%;
+  font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+  color: #787878;
+  font-weight: 400;
+}
+.get-button {
+  width: 50%;
+  height: 20%;
+  background: none;
+}
+.get {
+  width: 60%;
+  height: 50%;
+  background-color:#2F2105;
+  color: #F4AE26;
+  border-radius: 30px;
+  font-size: calc(2px + 10 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 700;
+}
+.four-block {
+  width: 100%;
+  height: 1200px;
+  display: flex;
+  justify-content: center;
+  padding: 0 0 5% 0;
+}
+.four-block-conteiner {
+  padding: 10% 0 0 0;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.four-block-content {
+  width: 95%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-column-gap: 5%;
+  grid-row-gap: 1%;
+  align-items: center;
+  justify-items: center;
+  padding: 3% 0;
+}
+.coffee-title2{
+  width: 100%;
+  text-align: left;
+  font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+  height: 6%;
+  color: #2F2105;
+  font-weight: 600;
+}
+.coffee-title2 span{
+  border-bottom: 4px solid #FF902A;
+  padding-bottom: 0.1%;
+  }
+.card1{
+  color: #2F2105;
+  font-weight: 600;
+  width: 100%;
+  height: 88%;
+  background-color: #fff;
+  box-shadow: 0px 0px 0px 8px rgba(255,255,255,0.7),0px  15px 45px 2px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+.card-buttons1{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-buttons1 p{
+  line-height: 25px;
+  width: 60%;
+  font-size: calc(2px + 13 * ((100vw - 320px) / (1440 - 320)));
+  color: #787878;
+  padding: 0 0 0 5%;
+}
+.buy1{
+  position: relative;
+  right: 5%;
+  bottom: 3px;
+  background: none;
+  width: 15%;
+}
+.bye-coffee1 {
+  font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 700;
+}
+.menu1 img{
+  position: relative;
+  width: 90%;
+  bottom: 3%;
+  left: 5%;
+}
+.plate-stars1 {
+  font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+  position: relative;
+  top: 50px;
+  left: 10%;
+  background-color: #fff;
+  width: 20%;
+  height: 30px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 0px 4px rgba(255,255,255,0.7);
+  padding: 2% 0 0 3%;
+  z-index: 2;
+}
+.plate-stars1:after{
+  content: '';
+  background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+  position: absolute;
+  left: 60%;
+  top: 15%;
+  width: 32px;
+  height: 32px;
+}
+.card-title-text1{
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  padding: 7% 5% 8% 5%;
+}
+.card-coffee1 {
+  font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 600;
+}
+.five-block {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 485px;
+  background: url(../img/five-coffee.png) 0 0/65% auto no-repeat;
+}
+.five-block-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.five-text-block {
+  width: 45%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.five-title {
+  letter-spacing: 1px;
+  font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 600;
+  color: #000;
+}
+.five-about{
+  width: 65%;
+  font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 400;
+  color: #787878;
+  line-height: 30px;
+}
+.slider {
+    position: absolute;
+    left: 37%;
+    top: 20%;
+    width: 76%;
+    height: 66%;
+}
+.wrapper{
+   overflow: hidden;
+   min-height: 80%;
+   max-height: 90%;
+   width: 100%;
+   margin: 0;
+}
+.image-slider_wrapper{
+
+}
+.image-slider_slide{
+
+}
+.image-slider_image{
+  text-align: center
+}
+.image-slider_image img{
+  height: 30%;
+  width: 75%;
+}
+.swiper-container {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-pagination span{
+  background-color: #FF902A;
+  font-size: 10px;
+}
+.testimonial-plate {
+  position: absolute;
+  bottom: 10%;
+  left: 27%;
+  width: 83%;
+  height: 30%;
+  border-radius: 10px;
+  background: #FFCB7C;
+  box-shadow: 0px 0px 0px 7px rgba(255, 211, 144,0.7);
+}
+.testimonial-text {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5%;
+}
+.name {
+  text-align: left;
+  font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+  color: #2F2105;
+  font-weight: 600;
+}
+.testimonial {
+  width: 100%;
+  text-align: left;
+  font-size: calc(2px + 13 * ((100vw - 320px) / (1440 - 320)));
+  color: #2F2105;
+  font-weight: 500;
+}
+.six-block {
+  width: 100%;
+  height: 665px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.six-block-container {
+  width: 80%;
+  height: 60%;
+  background: url(../img/unsplash_ftA71vetxuo.png) 0 0/100% auto no-repeat;
+}
+.six-block-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.six-block-content form{
+  width: 55%;
+  height: 13%;
+  position: relative;
+  top: 0;
+  left: 6%;
+}
+.subscribe {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  color: #fff;
+  font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 0 0 5% 0;
+}
+.subscribe-email {
+  position: relative;
+  background-color: #fff;
+  border-radius: 32px;
+  width: 80%;
+  height: 100%;
+  color: #787878;
+  font-size: calc(2px + 14 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 600;
+  padding: 0 0 0 5%;
+}
+.subscribe-button {
+  position: absolute;
+  top: 5%;
+  right: 21%;
+  background: #2F2105;
+  color: #fff;
+  border-radius: 32px;
+  width: 23%;
+  height: 88%;
+  font-size: calc(2px + 12 * ((100vw - 320px) / (1440 - 320)));
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/*MEDIA*/
+@media only screen and (min-width : 1460px){
+.first-block {
+    background: url(../img/bg_img_hero_top.png) 100% -2%/ 36% auto no-repeat, url(../img/bg_img_hero_left.png) 1% 114%/ 43% auto no-repeat;
+    height: 945px;
+    background-color: #F6EBDA;
+}
+.search {
+    position: relative;
+    top: 0;
+    left: 5%;
+    background: url(../img/icons_search.png) 15px 53%/8% auto no-repeat;
+    width: 26%;
+    height: 43px;
+    background-color: #fff;
+    border-radius: 36px;
+    color: #929292;
+    text-align: center;
+    align-items: center;
+    padding: 0.5% 0 0 4%;
+    box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 20%);
+}
+.search form input {
+    width: 80%;
+    font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+}
+  .coffee-caps {
+    bottom: 305px;
+    left: 6%;
+    width: 88%;
+    height: 650px;
+    z-index: 2;
+  }
+  .plate-stars:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    right: 0;
+    top: 18%;
+    width: 33px;
+    height: 32px;
+}
+  .services {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 100px;
+    text-align: center;
+  }
+  .third-text {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5% 0 2% 2%;
+}
+.third-title {
+    width: 35%;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    height: 10%;
+    color: #2F2105;
+    font-weight: 600;
+}
+.four-block {
+    width: 100%;
+    height: 1350px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5% 0;
+}
+.plate-stars1 {
+    font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 50px;
+    left: 10%;
+    background-color: #fff;
+    width: 21%;
+    height: 32px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 2% 0 0 3%;
+    z-index: 2;
+}
+.five-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 604px;
+    background: url(../img/five-coffee.png) 0 0/65% auto no-repeat;
+}
+.slider {
+    position: absolute;
+    left: 37%;
+    top: 20%;
+    width: 76%;
+    height: 65%;
+}
+.swiper-pagination span {
+    background-color: #FF902A;
+    width: 15px;
+    height: 15px;
+}
+.six-block {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: #fff;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0 0 5% 0;
+}
+}
+@media only screen and (min-width : 1670px){
+.first-block {
+    background: url(../img/bg_img_hero_top.png) 100% -2%/ 38% auto no-repeat, url(../img/bg_img_hero_left.png) 1% 116%/ 45% auto no-repeat;
+    height: 976px;
+    background-color: #F6EBDA;
+}
+  .search {
+    position: relative;
+    top: 0;
+    left: 9%;
+    background: url(../img/icons_search.png) 15px 50%/10% auto no-repeat;
+    width: 20%;
+    height: 42px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #929292;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
+    align-items: center;
+    padding: 3px 0 10px 46px;
+    box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 20%);
+}
+.search form input {
+    width: 80%;
+    font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+}
+.plate-star:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/90% auto no-repeat;
+    position: absolute;
+    right: 20%;
+    top: 30%;
+    width: 32px;
+    height: 32px;
+}
+  .coffee-caps {
+    bottom: 305px;
+    left: 6%;
+    width: 88%;
+    height: 790px;
+    z-index: 2;
+  }
+  .second-block {
+    width: 100%;
+    height: 712px;
+    display: flex;
+    justify-content: center;
+}
+.plate-stars {
+    font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 8%;
+    left: 7%;
+    background-color: #fff;
+    width: 23%;
+    height: 8%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 2.3% 0 0 4%;
+    z-index: 2;
+}
+.plate-stars:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/70% auto no-repeat;
+    position: absolute;
+    right: 4%;
+    top: 25%;
+    width: 32px;
+    height: 27px;
+}
+  .services {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 100px;
+    text-align: center;
+  }
+  .third_block {
+    width: 100%;
+    height: 580px;
+    background: url(../img/bg-image.png) 0 0/100% auto no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.third-title {
+    width: 35%;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    height: 10%;
+    color: #2F2105;
+    font-weight: 600;
+}
+.four-block {
+    width: 100%;
+    height: 1669px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5% 0;
+}
+.plate-stars1 {
+    font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 50px;
+    left: 10%;
+    background-color: #fff;
+    width: 20%;
+    height: 35px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 1.5% 0 0 3%;
+    z-index: 2;
+}
+.plate-stars1:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/65% auto no-repeat;
+    position: absolute;
+    left: 60%;
+    top: 18%;
+    width: 32px;
+    height: 32px;
+}
+.five-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 670px;
+    background: url(../img/five-coffee.png) 0 0/65% auto no-repeat;
+}
+.slider {
+    position: absolute;
+    left: 37%;
+    top: 20%;
+    width: 76%;
+    height: 65%;
+}
+.swiper-pagination span {
+    background-color: #FF902A;
+    width: 15px;
+    height: 15px;
+}
+.six-block {
+    width: 100%;
+    height: 910px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: #fff;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0 0 5% 0;
+}
+}
+@media only screen and (min-width : 1900px){
+.first-block {
+    background: url(../img/bg_img_hero_top.png) 100% -2%/ 38% auto no-repeat, url(../img/bg_img_hero_left.png) 1% 120%/ 40% auto no-repeat;
+    height: 1265px;
+    background-color: #F6EBDA;
+}
+.search {
+    position: relative;
+    top: 0;
+    left: 5%;
+    background: url(../img/icons_search.png) 15px 53%/8% auto no-repeat;
+    width: 29%;
+    height: 63px;
+    background-color: #fff;
+    border-radius: 36px;
+    color: #929292;
+    text-align: center;
+    align-items: center;
+    padding: 0.7% 0 0 4%;
+    box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 20%);
+}
+.search form input {
+    width: 80%;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+}
+.basket {
+    position: relative;
+    top: 0;
+    right: -5%;
+}
+.basket button img {
+    width: 131%;
+}
+.buttons {
+    width: 60%;
+    height: 27%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5% 0 0 0;
+}
+.order {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #2F2105;
+    width: 57%;
+    height: 87%;
+    border-radius: 38px;
+    color: #fff;
+    font-weight: 500;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: calc(1px + 13 * ((100vw - 320px) / (1440 - 320)));
+    padding: 0 10% 0 0;
+}
+.order:after {
+    content: '';
+    background: url(../img/Group_2.png) 0 0/100% auto no-repeat;
+    position: absolute;
+    right: 12%;
+    top: 19%;
+    width: 16%;
+    height: 46px;
+}
+.plate-name {
+    position: absolute;
+    top: 10%;
+    left: 23%;
+    background-color: #fff;
+    width: 40%;
+    height: 15%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 6px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 2% 0 0 9%;
+    z-index: 2;
+}
+.plate-number {
+    position: absolute;
+    top: 95%;
+    left: 35%;
+    background-color: #fff;
+    width: 20%;
+    height: 15%;
+    border-radius: 41px;
+    box-shadow: 0px 0px 0px 6px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 2% 0 0 7%;
+    z-index: 2;
+}
+.plate-star {
+    position: absolute;
+    top: 30%;
+    left: 83%;
+    background-color: #fff;
+    width: 20%;
+    height: 15%;
+    border-radius: 42px;
+    box-shadow: 0px 0px 0px 8px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+    padding: 2.1% 0 0 5%;
+    z-index: 2;
+}
+.plate-star:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/90% auto no-repeat;
+    position: absolute;
+    right: 12%;
+    top: 18%;
+    width: 43px;
+    height: 51px;
+}
+.coffee-caps {
+    bottom: 482px;
+    left: 6%;
+    width: 88%;
+    height: 849px;
+    z-index: 2;
+}
+  .second-block {
+    width: 100%;
+    height: 712px;
+    display: flex;
+    justify-content: center;
+}
+.plate-stars {
+    font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 8%;
+    left: 7%;
+    background-color: #fff;
+    width: 23%;
+    height: 8%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 2.3% 0 0 4%;
+    z-index: 2;
+}
+.plate-stars:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/70% auto no-repeat;
+    position: absolute;
+    right: 4%;
+    top: 25%;
+    width: 32px;
+    height: 27px;
+}
+  .services {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 100px;
+    text-align: center;
+  }
+  .third_block {
+    width: 100%;
+    height: 615px;
+    background: url(../img/bg-image.png) 0 0/100% auto no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.third-title {
+    width: 35%;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    height: 10%;
+    color: #2F2105;
+    font-weight: 600;
+}
+.four-block {
+    width: 100%;
+    height: 1730px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 3% 0;
+}
+.card1 {
+    color: #2F2105;
+    font-weight: 600;
+    width: 100%;
+    height: 95%;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 8px rgb(255 255 255 / 70%), 0px 15px 45px 2px rgb(0 0 0 / 20%);
+    border-radius: 8px;
+}
+.plate-stars1 {
+    font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 71px;
+    left: 10%;
+    background-color: #fff;
+    width: 23%;
+    height: 45px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 2.6% 0 0 4%;
+    z-index: 2;
+}
+.plate-stars1:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/65% auto no-repeat;
+    position: absolute;
+    left: 60%;
+    top: 15%;
+    width: 43px;
+    height: 33px;
+}
+.five-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 770px;
+    background: url(../img/five-coffee.png) 0 0/65% auto no-repeat;
+}
+.slider {
+    position: absolute;
+    left: 37%;
+    top: 20%;
+    width: 76%;
+    height: 65%;
+}
+.swiper-pagination span {
+    background-color: #FF902A;
+    width: 15px;
+    height: 15px;
+}
+.six-block {
+    width: 100%;
+    height: 1047px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: #fff;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0 0 5% 0;
+}
+}
+@media only screen and (min-width : 2300px){
+.first-block {
+    background: url(../img/bg_img_hero_top.png) 100% -2%/ 38% auto no-repeat,
+    url(../img/bg_img_hero_left.png) 1% 123%/ 45% auto no-repeat;
+    height: 1400px;
+    background-color: #F6EBDA;
+  }
+  .logo {
+    position: relative;
+    left: 0%;
+    width: 16%;
+    height: 95px;
+    display: block;
+    background: url(../img/logo_coffe.png)0 0/100% auto no-repeat;
+}
+.search {
+    position: relative;
+    top: 0;
+    left: 5%;
+    background: url(../img/icons_search.png) 15px 53%/8% auto no-repeat;
+    width: 29%;
+    height: 63px;
+    background-color: #fff;
+    border-radius: 36px;
+    color: #929292;
+    text-align: center;
+    align-items: center;
+    padding: 0.2% 0 0 4%;
+    box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 20%);
+}
+.search form input {
+    width: 80%;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+}
+.basket {
+    position: relative;
+    top: 0;
+    right: -5%;
+}
+.basket button img {
+    width: 131%;
+}
+.plate-name {
+    position: absolute;
+    top: 10%;
+    left: 23%;
+    background-color: #fff;
+    width: 40%;
+    height: 15%;
+    border-radius: 60px;
+    box-shadow: 0px 0px 0px 6px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 2% 0 0 9%;
+    z-index: 2;
+}
+.plate-number {
+    position: absolute;
+    top: 95%;
+    left: 35%;
+    background-color: #fff;
+    width: 20%;
+    height: 15%;
+    border-radius: 55px;
+    box-shadow: 0px 0px 0px 6px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 2% 0 0 7%;
+    z-index: 2;
+}
+.plate-star {
+    position: absolute;
+    top: 30%;
+    left: 83%;
+    background-color: #fff;
+    width: 20%;
+    height: 15%;
+    border-radius: 51px;
+    box-shadow: 0px 0px 0px 8px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+    padding: 2% 0 0 5%;
+    z-index: 2;
+}
+.plate-star:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/90% auto no-repeat;
+    position: absolute;
+    right: 19%;
+    top: 21%;
+    width: 49px;
+    height: 44px;
+}
+.order {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #2F2105;
+    width: 59%;
+    height: 95%;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 500;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: calc(1px + 13 * ((100vw - 320px) / (1440 - 320)));
+    padding: 0 10% 0 0;
+}
+.order:after {
+    content: '';
+    background: url(../img/Group_2.png) 0 0/100% auto no-repeat;
+    position: absolute;
+    right: 15%;
+    top: 26%;
+    width: 13%;
+    height: 41px;
+}
+.plate-star:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/90% auto no-repeat;
+    position: absolute;
+    right: 20%;
+    top: 30%;
+    width: 32px;
+    height: 32px;
+}
+.coffee-caps {
+    bottom: 430px;
+    left: 6%;
+    width: 88%;
+    height: 1050px;
+    z-index: 2;
+}
+  .second-block {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+}
+.plate-stars {
+    font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 8%;
+    left: 7%;
+    background-color: #fff;
+    width: 23%;
+    height: 8%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 2% 0 0 4%;
+    z-index: 2;
+}
+.plate-stars:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/70% auto no-repeat;
+    position: absolute;
+    right: 4%;
+    top: 15%;
+    width: 48px;
+    height: 34px;
+}
+  .services {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 100px;
+    text-align: center;
+  }
+  .third_block {
+    width: 100%;
+    height: 620px;
+    background: url(../img/bg-image.png) 0 0/100% auto no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.third-title {
+    width: 35%;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    height: 10%;
+    color: #2F2105;
+    font-weight: 600;
+}
+ .third-text-about {
+    line-height: 33px;
+    width: 90%;
+    font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #787878;
+    font-weight: 400;
+}
+.get-button {
+    width: 50%;
+    height: 25%;
+    background: none;
+}
+.four-block {
+    width: 100%;
+    height: 2140px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 3% 0;
+}
+.plate-stars1 {
+    font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 76px;
+    left: 10%;
+    background-color: #fff;
+    width: 21%;
+    height: 53px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 1.5% 0 0 3%;
+    z-index: 2;
+}
+.plate-stars1:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/65% auto no-repeat;
+    position: absolute;
+    left: 60%;
+    top: 13%;
+    width: 50px;
+    height: 32px;
+}
+.five-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 870px;
+    background: url(../img/five-coffee.png) 0 0/65% auto no-repeat;
+}
+.slider {
+    position: absolute;
+    left: 37%;
+    top: 20%;
+    width: 76%;
+    height: 577px;
+}
+.six-block {
+    width: 100%;
+    height: 1160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: #fff;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0 0 5% 0;
+}
+}
+@media only screen and (max-width : 1410px){
+  .first-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/bg_img_hero_top.png) 100% -1px/ 36% auto no-repeat, url(../img/bg_img_hero_left.png) 1% 102%/ 39% auto no-repeat;
+    height: 799px;
+    width: 100%;
+    background-color: #F6EBDA;
+}
+.plate-name {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    background-color: #fff;
+    width: 35%;
+    height: 15%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 6px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 2.5% 0 0 6%;
+    z-index: 2;
+}
+.plate-number {
+    position: absolute;
+    top: 95%;
+    left: 35%;
+    background-color: #fff;
+    width: 20%;
+    height: 15%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 6px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 2.5% 0 0 7%;
+    z-index: 2;
+}
+.plate-star {
+    position: absolute;
+    top: 30%;
+    left: 83%;
+    background-color: #fff;
+    width: 20%;
+    height: 15%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 8px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+    padding: 2.5% 0 0 4%;
+    z-index: 2;
+}
+.plate-star:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/80% auto no-repeat;
+    position: absolute;
+    right: 15%;
+    top: 23%;
+    width: 32px;
+    height: 32px;
+}
+  .search form{
+    width: 70%;
+  }
+  .search form input {
+    width: 100%;
+}
+.cofee-img {
+    position: relative;
+    bottom: 30%;
+    left: 6%;
+}
+.slider {
+    position: absolute;
+    left: 37%;
+    top: 20%;
+    width: 76%;
+    height: 63%;
+}
+}
+@media only screen and (max-width : 1250px){
+  .first-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/bg_img_hero_top.png) 100% -1px/ 36% auto no-repeat, url(../img/bg_img_hero_left.png) 1% 85%/ 42% auto no-repeat;
+    height: 967px;
+    width: 100%;
+    background-color: #F6EBDA;
+}
+.content {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3% 0 0 0;
+}
+.text-content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3% 0 0 0;
+}
+.plate-name {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    background-color: #fff;
+    width: 35%;
+    height: 13%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 6px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 1.5% 0 0 6%;
+    z-index: 2;
+}
+.plate-number {
+    position: absolute;
+    top: 93%;
+    left: 40%;
+    background-color: #fff;
+    width: 15%;
+    height: 13%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 6px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 2% 0 0 4%;
+    z-index: 2;
+}
+.plate-star {
+    position: absolute;
+    top: 30%;
+    left: 83%;
+    background-color: #fff;
+    width: 17%;
+    height: 13%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 7px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+    padding: 2% 0 0 3%;
+    z-index: 2;
+}
+.plate-star:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/80% auto no-repeat;
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    width: 27px;
+    height: 32px;
+}
+.caps {
+    display: flex;
+    justify-content: center;
+    border-radius: 65px;
+    width: 100%;
+    height: 70%;
+    background-color: #F9D9AA;
+}
+.plate-stars {
+    font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 8%;
+    left: 7%;
+    background-color: #fff;
+    width: 23%;
+    height: 7%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 1.5% 0 0 3%;
+    z-index: 2;
+}
+.plate-stars:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    right: 3%;
+    top: 12%;
+    width: 27px;
+    height: 32px;
+}
+.third_block {
+    width: 100%;
+    height: 385px;
+    background: url(../img/bg-image.png) 0 0/100% auto no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.cofee-img {
+    width: 45%;
+    position: relative;
+    bottom: 20%;
+    left: 6%;
+}
+  .search form{
+    width: 80%;
+  }
+  .search form input {
+    width: 100%;
+}
+.buttons {
+    width: 60%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5% 0 0 0;
+}
+.order {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #2F2105;
+    width: 57%;
+    height:47px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 500;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: calc(3px + 13 * ((100vw - 320px) / (1440 - 320)));
+    padding: 0 10% 0 0;
+}
+.menu {
+    background: none;
+    width: 40%;
+    height: 100%;
+    color: #F4AE26;
+    font-size: calc(3px + 12 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.coffee-caps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    bottom: 355px;
+    left: 6%;
+    width: 88%;
+    height: 550px;
+    z-index: 2;
+}
+.four-block {
+    width: 100%;
+    height: 1054px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5% 0;
+}
+.plate-stars1 {
+    font-size: calc(1px + 15 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 36px;
+    left: 10%;
+    background-color: #fff;
+    width: 20%;
+    height: 21px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 1.5% 0 0 3%;
+    z-index: 2;
+}
+.plate-stars1:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    left: 60%;
+    top: 15%;
+    width: 25px;
+    height: 32px;
+}
+.five-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 400px;
+    background: url(../img/five-coffee.png) 0 0/65% auto no-repeat;
+}
+.slider {
+    position: absolute;
+    left: 38%;
+    top: 20%;
+    width: 76%;
+    height: 68%;
+}
+.six-block {
+    width: 100%;
+    height: 568px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe {
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    color: #fff;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0 0 5% 0;
+}
+}
+@media only screen and (max-width : 1130px){
+.first-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/bg_img_hero_top.png) 100% -1px/ 36% auto no-repeat, url(../img/bg_img_hero_left.png) 2% 110%/ 50% auto no-repeat;
+    height: 819px;
+    width: 100%;
+    background-color: #F6EBDA;
+}
+.header-menu {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1% 0 0 20%;
+}
+.header-list li a {
+    height: 45%;
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #000;
+    font-weight: 400;
+}
+.logo {
+    width: 15%;
+    height: 100%;
+    display: block;
+    background: url(../img/logo_coffe.png)0 0/100% auto no-repeat;
+}
+.search {
+    position: relative;
+    top: 0;
+    left: 5%;
+    background: url(../img/icons_search.png) 15px 53%/8% auto no-repeat;
+    width: 30%;
+    height: 34px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #929292;
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
+    align-items: center;
+    padding: 0.8% 0 13px 8%;
+    box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 20%);
+}
+  .search form{
+    width: 70%;
+  }
+  .search form input {
+    width: 100%;
+}
+.title {
+    line-height: 60px;
+    font-weight: 600;
+    font-size: calc(32px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #2F2105;
+}
+.text {
+    line-height: 20px;
+    width: 75%;
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #787878;
+    font-weight: 400;
+}
+  .text-content {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3% 0 0 0;
+}
+.order {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #2F2105;
+    width: 57%;
+    height: 47px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 500;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: calc(4px + 13 * ((100vw - 320px) / (1440 - 320)));
+    padding: 0 10% 0 0;
+}
+.order:after {
+    content: '';
+    background: url(../img/Group_2.png) 0 0/100% auto no-repeat;
+    position: absolute;
+    right: 15%;
+    top: 26%;
+    width: 15%;
+    height: 35px;
+}
+.menu {
+    background: none;
+    width: 40%;
+    height: 100%;
+    color: #F4AE26;
+    font-size: calc(4px + 12 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.picture img {
+    width: 80%;
+    position: relative;
+    bottom: 0;
+    left: 20%;
+}
+.plate-name {
+    position: absolute;
+    top: 10%;
+    left: 23%;
+    background-color: #fff;
+    width: 35%;
+    height: 13%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 6px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 2.3% 0 0 4%;
+    z-index: 2;
+}
+.plate-number {
+    position: absolute;
+    top: 93%;
+    left: 30%;
+    background-color: #fff;
+    width: 20%;
+    height: 13%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 6px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 2.5% 0 0 6%;
+    z-index: 2;
+}
+.plate-star {
+    position: absolute;
+    top: 30%;
+    left: 83%;
+    background-color: #fff;
+    width: 18%;
+    height: 13%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 7px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+    padding: 2.5% 0 0 3%;
+    z-index: 2;
+}
+.plate-star:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/80% auto no-repeat;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    width: 26px;
+    height: 32px;
+}
+.plate-stars {
+    font-size: calc(1px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 8%;
+    left: 7%;
+    background-color: #fff;
+    width: 20%;
+    height: 7%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 2% 0 0 3%;
+    z-index: 2;
+}
+.plate-stars:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    left: 60%;
+    top: 12%;
+    width: 24px;
+    height: 32px;
+}
+.coffee-caps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    bottom: 335px;
+    left: 6%;
+    width: 88%;
+    height: 447px;
+    z-index: 2;
+}
+.cofee-img {
+    width: 45%;
+    position: relative;
+    bottom: 20%;
+    left: 6%;
+}
+.third-text {
+    width: 45%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5% 0 2% 2%;
+}
+.third-title {
+    width: 35%;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    height: 10%;
+    color: #2F2105;
+    font-weight: 600;
+}
+.four-block {
+    width: 100%;
+    height: 876px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5% 0;
+}
+.plate-stars1 {
+    font-size: calc(1px + 15 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 36px;
+    left: 10%;
+    background-color: #fff;
+    width: 20%;
+    height: 21px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 2.7% 0 0 3%;
+    z-index: 2;
+}
+.plate-stars1:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    left: 55%;
+    top: 15%;
+    width: 22px;
+    height: 32px;
+}
+.five-text-block {
+    width: 30%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.slider {
+    position: absolute;
+    left: 38%;
+    top: 20%;
+    width: 76%;
+    height: 63%;
+}
+.five-about {
+    width: 65%;
+    font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+    color: #787878;
+    line-height: 20px;
+}
+.six-block {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.six-block-content {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
+@media only screen and (max-width : 980px){
+  .first-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/bg_img_hero_top.png) 100% -1px/ 36% auto no-repeat, url(../img/bg_img_hero_left.png) 2% 95%/ 50% auto no-repeat;
+    height: 730px;
+    width: 100%;
+    background-color: #F6EBDA;
+}
+  .header {
+    text-align: center;
+    width: 90%;
+    height: 100px;
+    padding: 3% 0 0 0;
+}
+.header-menu {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1% 0 0 10%;
+}
+.search {
+    position: relative;
+    top: 0;
+    left: 5%;
+    background: url(../img/icons_search.png) 15px 53%/8% auto no-repeat;
+    width: 30%;
+    height: 34px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #929292;
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
+    align-items: center;
+    padding: 1.2% 0 0px 5%;
+    box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 20%);
+}
+.text-content {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3% 0 0 0;
+}
+.picture {
+    position: relative;
+    width: 45%;
+    height: 100%;
+}
+.plate-name {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    background-color: #fff;
+    width: 45%;
+    height: 13%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 5px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(6px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 3% 0 0 6%;
+    z-index: 2;
+}
+.plate-number {
+    position: absolute;
+    top: 79%;
+    left: 30%;
+    background-color: #fff;
+    width: 25%;
+    height: 13%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 5px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 3% 0 0 7%;
+    z-index: 2;
+}
+.plate-star {
+    position: absolute;
+    top: 30%;
+    left: 83%;
+    background-color: #fff;
+    width: 25%;
+    height: 15%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 7px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+    padding: 4% 0 0 5%;
+    z-index: 2;
+}
+.plate-star:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/80% auto no-repeat;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    width: 23px;
+    height: 32px;
+}
+.coffee-caps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    bottom: 246px;
+    left: 6%;
+    width: 88%;
+    height: 385px;
+    z-index: 2;
+}
+.cofee-img {
+    width: 45%;
+    position: relative;
+    bottom: 35%;
+    left: 6%;
+}
+.card-plate {
+    position: relative;
+    bottom: 18%;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.card {
+    color: #2F2105;
+    font-weight: 600;
+    width: 30%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 5px rgb(255 255 255 / 70%), 0px 15px 45px 2px rgb(0 0 0 / 20%);
+    border-radius: 8px;
+}
+.plate-stars {
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 8%;
+    left: 7%;
+    background-color: #fff;
+    width: 23%;
+    height: 8%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 2.3% 0 0 4%;
+    z-index: 2;
+}
+.buy {
+    position: relative;
+    right: 10%;
+    bottom: 7px;
+    background: none;
+    width: 18%;
+}
+.hot {
+    width: 38%;
+    height: 75%;
+    color: #FFD28F;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FFD28F;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+    padding: 4% 0 0 8%;
+}
+.cold {
+    width: 42%;
+    height: 75%;
+    color: #FFD28F;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FFD28F;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+    padding: 4% 0 0 7%;
+}
+.second-block {
+    width: 100%;
+    height: 508px;
+    display: flex;
+    justify-content: center;
+}
+.third_block {
+    width: 100%;
+    height: 311px;
+    background: url(../img/bg-image.png) 0 0/100% auto no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.services {
+    position: relative;
+    width: 100%;
+    height: 253px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 100px;
+    text-align: center;
+}
+.touсh-cap:after {
+    content: 'there are 20+ coffees for you';
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    font-size: calc(6px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+}
+.touсh-cap {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 5%;
+    color: #2F2105;
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+}
+.car {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 5%;
+    color: #2F2105;
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+}
+.car:after {
+    content: 'Choose delivery service';
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    font-size: calc(6px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+}
+.just-cap {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 5%;
+    color: #2F2105;
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+}
+.just-cap:after {
+    content: 'Choose delivery service';
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    font-size: calc(6px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+}
+.cofee-img {
+    width: 45%;
+    position: relative;
+    bottom: 15%;
+    left: 6%;
+}
+.third-title {
+    width: 55%;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    height: 20%;
+    color: #2F2105;
+    font-weight: 600;
+    padding: 0 0 3% 0;
+}
+.center-text {
+    width: 70%;
+    color: #2F2105;
+    font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 0 0 5% 0;
+}
+.third-text-about {
+    line-height: 20px;
+    width: 100%;
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #787878;
+    font-weight: 400;
+    padding: 0 0 5% 0;
+}
+.get-button {
+    width: 50%;
+    height: 20%;
+    background: none;
+}
+.get {
+    width: 70%;
+    height: 100%;
+    background-color: #2F2105;
+    color: #F4AE26;
+    border-radius: 30px;
+    font-size: calc(4px + 10 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.four-block {
+    width: 100%;
+    height: 1310px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5% 0;
+}
+.four-block-content {
+    width: 95%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-column-gap: 5%;
+    grid-row-gap: 1%;
+    align-items: center;
+    justify-items: center;
+    padding: 3% 0;
+}
+.plate-stars1 {
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 36px;
+    left: 10%;
+    background-color: #fff;
+    width: 20%;
+    height: 25px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 2% 0 0 3%;
+    z-index: 2;
+}
+.plate-stars1:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    left: 55%;
+    top: 15%;
+    width: 28px;
+    height: 32px;
+}
+.menu1 img {
+    position: relative;
+    width: 85%;
+    bottom: 10%;
+    left: 5%;
+}
+.card1 {
+    color: #2F2105;
+    font-weight: 600;
+    width: 90%;
+    height: 90%;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 8px rgb(255 255 255 / 70%), 0px 15px 45px 2px rgb(0 0 0 / 20%);
+    border-radius: 8px;
+}
+.card-title-text1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5%;
+}
+.card-coffee1 {
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+}
+.bye-coffee1 {
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.card-buttons1 p {
+    line-height: 25px;
+    width: 65%;
+    font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #787878;
+    padding: 0 0 0 5%;
+}
+.five-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 300px;
+    background: url(../img/five-coffee.png) 0 0/65% auto no-repeat;
+}
+.five-text-block {
+    width: 44%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.five-title {
+    letter-spacing: 1px;
+    font-size: calc(17px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    color: #000;
+}
+.five-about {
+    width: 70%;
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+    color: #787878;
+    line-height: 20px;
+}
+.name {
+    text-align: left;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #2F2105;
+    font-weight: 600;
+}
+.testimonial {
+    width: 100%;
+    text-align: left;
+    font-size: calc(4px + 13 * ((100vw - 320px) / (1440 - 320)));
+    color: #2F2105;
+    font-weight: 500;
+}
+.testimonial-text {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3% 0 3% 5%;
+}
+.slider {
+    position: absolute;
+    left: 46%;
+    top: 12%;
+    width: 68%;
+    height: 87%;
+}
+.testimonial-plate {
+    position: absolute;
+    bottom: 10%;
+    left: 27%;
+    width: 69%;
+    height: 29%;
+    border-radius: 10px;
+    background: #FFCB7C;
+    box-shadow: 0px 0px 0px 5px rgb(255 211 144 / 70%);
+}
+.six-block {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.six-block-container {
+    width: 80%;
+    height: 60%;
+}
+.six-block-content form {
+    width: 65%;
+    height: 18%;
+    position: relative;
+    bottom: 15%;
+    left: 6%;
+}
+.subscribe {
+    width: 100%;
+    height: 45%;
+    text-align: center;
+    color: #fff;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 3% 0 0 0;
+}
+}
+@media only screen and (max-width : 790px){
+.first-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/bg_img_hero_top.png) 100% -1px/ 36% auto no-repeat, url(../img/bg_img_hero_left.png) 2% 83%/ 50% auto no-repeat;
+    height: 621px;
+    width: 100%;
+    background-color: #F6EBDA;
+}
+.logo {
+    position: relative;
+    left: 15%;
+    width: 25%;
+    height: 100%;
+    display: block;
+    background: url(../img/logo_coffe.png)0 0/100% auto no-repeat;
+}
+.header-menu {
+    overflow: auto;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: -100%;
+    left: 0;
+    width: 18%;
+    height: 35%;
+    border-radius: 7px;
+    background-color: #F6EBDA;
+    padding: 3%;
+    z-index: 2;
+    transition: all 0.4s ease 0s;
+}
+.header-menu.active {
+    top: 10%;
+    z-index: 12;
+    width: 25%;
+    height: 30%;
+    padding: 5% 0 5% 5%;
+}
+.header-list{
+  display: flex;
+  position: relative;
+  z-index: 3;
+}
+.header-list li a {
+    height: 45%;
+    font-size: calc(13px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #000;
+    font-weight: 400;
+}
+
+.header-list li a:hover{
+  color: #FF902A;
+}
+.header-burger {
+    display: block;
+    position: relative;
+    top: 10%;
+    right: 35%;
+    width: 10%;
+    height: 35%;
+    z-index: 3;
+}
+.header-burger:before,
+.header-burger:after{
+  content: '';
+  background-color:#2F2105;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+.header-burger:before{
+  top: -5px;
+}
+.header-burger:after{
+  bottom: 3px;
+}
+.header-burger.active:before{
+ transform:rotate(45deg);
+ top:8px
+}
+.header-burger.active:after{
+ transform:rotate(-45deg);
+ bottom: 18px;
+}
+.header-burger.active span{
+  transform: scale(0);
+}
+.header-burger span{
+position: absolute;
+background-color:#2F2105;
+left: 0;
+width: 100%;
+height: 3px;
+top: 9px;
+transition: all 0.3s ease 0s;
+}
+.search {
+    position: relative;
+    top: 0;
+    left: 5%;
+    background: url(../img/icons_search.png) 15px 53%/8% auto no-repeat;
+    width: 35%;
+    height: 34px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #929292;
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
+    align-items: center;
+    padding: 1.2% 0 0px 6%;
+    box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 20%);
+}
+  .text-content {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3% 0 0 0;
+}
+.title {
+    line-height: 40px;
+    font-weight: 600;
+    font-size: calc(32px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #2F2105;
+}
+.text {
+    line-height: 20px;
+    width: 75%;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #787878;
+    font-weight: 400;
+}
+.order {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #2F2105;
+    width: 57%;
+    height: 37px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 500;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+    padding: 0 10% 0 0;
+}
+.order:after {
+    content: '';
+    background: url(../img/Group_2.png) 0 0/100% auto no-repeat;
+    position: absolute;
+    right: 9%;
+    top: 18%;
+    width: 17%;
+    height: 44px;
+}
+.menu {
+    background: none;
+    width: 40%;
+    height: 100%;
+    color: #F4AE26;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.picture img {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 5%;
+}
+.plate-name {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    background-color: #fff;
+    width: 50%;
+    height: 13%;
+    border-radius: 30px;
+    box-shadow: 0 0px 0px 4px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 3.5% 0 0 4%;
+    z-index: 2;
+}
+.plate-number {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    background-color: #fff;
+    width: 28%;
+    height: 12%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 3% 0 0 8%;
+    z-index: 2;
+}
+.plate-star {
+    position: absolute;
+    top: 30%;
+    left: 83%;
+    background-color: #fff;
+    width: 33%;
+    height: 13%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 5px rgb(255 255 255 / 70%);
+    color: #2F2105;
+    font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+    padding: 3.4% 0 0 5%;
+    z-index: 2;
+}
+.plate-star:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/80% auto no-repeat;
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    width: 20px;
+    height: 32px;
+}
+.picture {
+    position: relative;
+    top: 30%;
+    width: 45%;
+    height: 100%;
+}
+.coffee-caps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    bottom: 176px;
+    left: 6%;
+    width: 88%;
+    height: 328px;
+    z-index: 2;
+}
+.caps {
+    display: flex;
+    justify-content: center;
+    border-radius: 21px;
+    width: 100%;
+    height: 70%;
+    background-color: #F9D9AA;
+}
+.second-block {
+    width: 100%;
+    height: 437px;
+    display: flex;
+    justify-content: center;
+}
+.services {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 100px;
+    text-align: center;
+}
+.third_block {
+    width: 100%;
+    height: 263px;
+    background: url(../img/bg-image.png) 0 0/100% auto no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.cofee-img {
+    width: 48%;
+    position: relative;
+    bottom: 20%;
+    left: 6%;
+}
+.get {
+    width: 90%;
+    height: 100%;
+    background-color: #2F2105;
+    color: #F4AE26;
+    border-radius: 30px;
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.get-button {
+    width: 50%;
+    height: 20%;
+    background: none;
+}
+.four-block {
+    width: 100%;
+    height: 1140px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5% 0;
+}
+.plate-stars1 {
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 36px;
+    left: 10%;
+    background-color: #fff;
+    width: 20%;
+    height: 19px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 2% 0 0 3%;
+    z-index: 2;
+}
+.plate-stars:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    left: 60%;
+    top: 12%;
+    width: 19px;
+    height: 32px;
+}
+.plate-stars1:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    left: 55%;
+    top: 15%;
+    width: 21px;
+    height: 32px;
+}
+.card-buttons1 p {
+    line-height: 25px;
+    width: 65%;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #787878;
+    padding: 0 0 0 5%;
+}
+.five-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 275px;
+    background: url(../img/five-coffee.png) 0 0/65% auto no-repeat;
+}
+.six-block {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.six-block-container {
+    width: 80%;
+    height: 50%;
+}
+.subscribe {
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    color: #fff;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 3% 0 0 0;
+}
+.six-block-content form {
+    width: 65%;
+    height: 13%;
+    position: relative;
+    bottom: 25%;
+    left: 6%;
+}
+}
+@media only screen and (max-width : 685px){
+.first-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/bg_img_hero_top.png) 100% -1px/ 36% auto no-repeat, url(../img/bg_img_hero_left.png) 1% 90%/ 50% auto no-repeat;
+    height: 636px;
+    width: 100%;
+    background-color: #F6EBDA;
+}
+.logo {
+    width: 23%;
+    height: 100%;
+    display: block;
+    background: url(../img/logo_coffe.png)0 0/100% auto no-repeat;
+}
+.header-burger {
+    display: block;
+    position: relative;
+    top: 10%;
+    right: 30%;
+    width: 10%;
+    height: 35%;
+    z-index: 3;
+}
+.header-burger:before,
+.header-burger:after{
+  content: '';
+  background-color:#2F2105;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+.header-burger:before{
+  top: -5px;
+}
+.header-burger:after{
+  bottom: 3px;
+}
+.header-burger.active:before{
+ transform:rotate(45deg);
+ top:9px
+}
+.header-burger.active:after{
+ transform:rotate(-45deg);
+ bottom: 18px;
+}
+.header-burger.active span{
+  transform: scale(0);
+}
+.header-burger span{
+position: absolute;
+background-color:#2F2105;
+left: 0;
+width: 100%;
+height: 3px;
+top: 9px;
+transition: all 0.3s ease 0s;
+}
+.picture {
+    position: relative;
+    top: 30%;
+    width: 55%;
+    height: 100%;
+}
+.plate-number {
+    top: 70%;
+    left: 25%;
+    background-color: #fff;
+    width: 28%;
+    height: 12%;
+    padding: 5% 0 0 8%;
+}
+.search {
+    position: relative;
+    top: 0;
+    left: 5%;
+    background: url(../img/icons_search.png) 15px 53%/8% auto no-repeat;
+    width: 45%;
+    height: 34px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #929292;
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
+    align-items: center;
+    padding: 1.5% 0 0px 8%;
+    box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 20%);
+}
+.plate-star {
+    position: absolute;
+    top: 30%;
+    left: 83%;
+    background-color: #fff;
+    width: 33%;
+    height: 13%;
+    padding: 5% 0 0 5%;
+}
+
+.plate-star:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/80% auto no-repeat;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    width: 21px;
+    height: 32px;
+}
+.plate-name {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    background-color: #fff;
+    width: 55%;
+    height: 13%;
+    padding: 5% 0 0 7%;
+    z-index: 2;
+}
+.plate-number {
+    top: 60%;
+    left: 20%;
+    background-color: #fff;
+    width: 28%;
+    height: 12%;
+    padding: 5% 0 0 8%;
+}
+.coffee-caps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    bottom: 219px;
+    left: 6%;
+    width: 88%;
+    height: 277px;
+    z-index: 2;
+}
+.plate-stars {
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 8%;
+    left: 10%;
+    background-color: #fff;
+    width: 25%;
+    height: 7%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 3px rgb(255 255 255 / 70%);
+    padding: 2% 0 0 4%;
+    z-index: 2;
+}
+.plate-stars1 {
+    font-size: calc(6px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 36px;
+    left: 10%;
+    background-color: #fff;
+    width: 20%;
+    height: 15px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 70%);
+    padding: 1.5% 0 0 3%;
+    z-index: 2;
+}
+.plate-stars1:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    left: 55%;
+    top: 1%;
+    width: 21px;
+    height: 32px;
+}
+.second-block {
+    width: 100%;
+    height: 395px;
+    display: flex;
+    justify-content: center;
+}
+.services {
+    position: relative;
+    width: 100%;
+    height: 156px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 100px;
+    text-align: center;
+}
+.third_block {
+    width: 100%;
+    height: 240px;
+    background: url(../img/bg-image.png) 0 0/100% auto no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.center-text {
+    padding: 5% 0 5% 0;
+}
+.third-text {
+    width: 45%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3% 0 2% 2%;
+}
+.third-text-about {
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    line-height: 15px;
+    padding: 0 0 3% 0;
+}
+.get-button {
+    width: 50%;
+    height: 70%;
+    background: none;
+}
+.four-block {
+    width: 100%;
+    height: 1011px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5% 0;
+}
+.card-buttons1 {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card-buttons1 p {
+    line-height: 15px;
+    width: 65%;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #787878;
+    padding: 5% 0 0 5%;
+}
+.five-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 235px;
+    background: url(../img/five-coffee.png) 0 0/65% auto no-repeat;
+}
+.five-about {
+    width: 75%;
+    font-size: calc(6px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+    color: #787878;
+    line-height: 18px;
+}
+.five-text-block {
+    width: 44%;
+    height: 53%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.testimonial-plate {
+    position: absolute;
+    bottom: 10%;
+    left: 27%;
+    width: 75%;
+    height: 30%;
+    border-radius: 4px;
+    background: #FFCB7C;
+    box-shadow: 0px 0px 0px 3px rgb(255 211 144 / 70%);
+}
+.six-block-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe-button {
+    position: absolute;
+    top: 5%;
+    right: 21%;
+    background: #2F2105;
+    color: #fff;
+    border-radius: 32px;
+    width: 23%;
+    height: 47%;
+    font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.subscribe-email {
+    position: relative;
+    background-color: #fff;
+    border-radius: 32px;
+    width: 80%;
+    height: 100%;
+    color: #787878;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 0 0 0 5%;
+}
+.subscribe {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: #fff;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 3% 0 0 0;
+}
+.six-block-content form {
+    width: 65%;
+    height: 25%;
+    position: relative;
+    bottom: 25%;
+    left: 6%;
+    padding: 0 0 5% 0;
+}
+.subscribe-button {
+    position: absolute;
+    top: 4%;
+    right: 21%;
+    background: #2F2105;
+    color: #fff;
+    border-radius: 32px;
+    width: 23%;
+    height: 47%;
+    font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.six-block {
+    width: 100%;
+    height: 372px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.six-block-container {
+    width: 80%;
+    height: 50%;
+}
+.six-block-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.six-block-content form {
+    width: 65%;
+    height: 30%;
+    position: relative;
+    bottom: 25%;
+    left: 6%;
+    padding: 0 0 5% 0;
+}
+.subscribe {
+    width: 70%;
+    height: 30%;
+    text-align: center;
+    color: #fff;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0 0 5% 0;
+}
+}
+@media only screen and (max-width : 560px){
+  .search {
+    position: relative;
+    top: 0;
+    left: 5%;
+    background: url(../img/icons_search.png) 15px 53%/10% auto no-repeat;
+    width: 45%;
+    height: 34px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #929292;
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
+    align-items: center;
+    padding: 2% 0 0px 10%;
+    box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 20%);
+}
+.search form {
+    width: 80%;
+}
+.first-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/bg_img_hero_top.png) 100% -1px/ 46% auto no-repeat, url(../img/bg_img_hero_left.png) 1% 95%/ 60% auto no-repeat;
+    height: 620px;
+    width: 100%;
+    background-color: #F6EBDA;
+}
+.logo {
+    width: 25%;
+}
+.header {
+    width: 95%;
+    padding: 5% 0 0 0;
+}
+.header-burger.active:before {
+    transform: rotate(45deg);
+    top: 6px;
+}
+.header-menu.active {
+    top: 10%;
+    z-index: 12;
+    width: 28%;
+    height: 30%;
+    padding: 5% 0 5% 5%;
+}
+.basket {
+    left: 5%;
+}
+.buttons {
+   display: flex;
+   justify-content: space-between;
+   height: 20%;
+   width: 70%;
+}
+.text {
+    line-height: 15px;
+    width: 75%;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #787878;
+    font-weight: 400;
+}
+.content {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3% 0 0 0;
+}
+.order {
+    width: 55%;
+}
+.order:after {
+    content: '';
+    background: url(../img/Group_2.png) 0 0/100% auto no-repeat;
+    position: absolute;
+    right: 9%;
+    top: 23%;
+    width: 19%;
+    height: 24px;
+}
+.menu {
+    background: none;
+    width: 45%;
+    height: 100%;
+    color: #F4AE26;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.plate-name {
+    position: absolute;
+    top: 8%;
+    left: 4%;
+    width: 55%;
+    height: 9%;
+    padding: 4% 0 0 7%;
+}
+.plate-number {
+    top: 52%;
+    left: 15%;
+    background-color: #fff;
+    width: 28%;
+    height: 8%;
+    padding: 4% 0 0 8%;
+}
+.plate-star {
+    position: absolute;
+    top: 30%;
+    left: 83%;
+    background-color: #fff;
+    width: 33%;
+    height: 8%;
+    padding: 3.5% 0 0 5%;
+}
+.plate-star:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/80% auto no-repeat;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    width: 21px;
+    height: 32px;
+}
+.card-plate {
+    position: relative;
+    bottom: 5%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    color: #2F2105;
+    font-weight: 600;
+    width: 60%;
+    height: 296px;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 5px rgb(255 255 255 / 70%), 0px 15px 45px 2px rgb(0 0 0 / 20%);
+    border-radius: 8px;
+}
+.coffee-caps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    bottom: 188px;
+    left: 10%;
+    width: 80%;
+    height: 1095px;
+    z-index: 2;
+    align-items: center;
+}
+.card-coffee {
+    font-size: calc(12px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+}
+.bye-coffee {
+    font-size: calc(12px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.buy {
+    width: 15%;
+}
+.hot {
+    width: 40%;
+    height: 76%;
+    color: #FFD28F;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FFD28F;
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+    padding: 3% 0 0 9%;
+}
+.cold {
+    width: 45%;
+    height: 76%;
+    color: #FFD28F;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FFD28F;
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+    padding: 4% 0 0 9%;
+}
+.caps {
+    display: flex;
+    justify-content: center;
+    border-radius: 21px;
+    width: 100%;
+    height: 100%;
+    background-color: #F9D9AA;
+}
+.coffee-title {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    height: 10%;
+    color: #2F2105;
+    font-weight: 600;
+    padding: 0 0 0 5%;
+}
+.plate-stars {
+    font-size: calc(12px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 11%;
+    left: 10%;
+    background-color: #fff;
+    width: 25%;
+    height: 9%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 3px rgb(255 255 255 / 70%);
+    padding: 2% 0 0 4%;
+    z-index: 2;
+}
+.plate-stars:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    left: 60%;
+    top: 15%;
+    width: 28px;
+    height: 32px;
+}
+.plate-stars1 {
+    font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 36px;
+    left: 10%;
+    background-color: #fff;
+    width: 24%;
+    height: 15px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 2px rgb(255 255 255 / 70%);
+    padding: 1.5% 0 0 3%;
+    z-index: 2;
+}
+.second-block {
+    width: 100%;
+    height: 712px;
+    display: flex;
+    justify-content: center;
+}
+.services {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 100px;
+    text-align: center;
+    align-items: center;
+}
+.touсh-cap {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 5%;
+    color: #2F2105;
+    font-size: calc(15px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+}
+.touсh-cap:before {
+    content: '';
+    background: url(../img/image.png) 0 0/100% auto no-repeat;
+    position: absolute;
+    bottom: 60%;
+    left: 30%;
+    width: 50%;
+    height: 60%;
+}
+.touсh-cap:after {
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+}
+.car {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 5%;
+    color: #2F2105;
+    font-size: calc(15px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+}
+.car:before {
+    content: '';
+    background: url(../img/food-truck.png) 0 0/100% auto no-repeat;
+    position: absolute;
+    bottom: 60%;
+    left: 28%;
+    width: 50%;
+    height: 60%;
+}
+.car:after {
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+}
+.just-cap {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 5%;
+    color: #2F2105;
+    font-size: calc(15px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+}
+.just-cap:before {
+    content: '';
+    background: url(../img/coffee-cup2.png) 0 0/100% auto no-repeat;
+    position: absolute;
+    bottom: 60%;
+    left: 28%;
+    width: 50%;
+    height: 60%;
+}
+.just-cap:after {
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+}
+.third_block {
+    position: relative;
+    top: 39px;
+    width: 100%;
+    height: 185px;
+    background: url(../img/bg-image.png) 0 0/100% auto no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.cofee-img {
+    width: 50%;
+    position: relative;
+    bottom: 25%;
+    left: 6%;
+}
+.third-text {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3% 0 2% 2%;
+}
+.third-text-about {
+    font-size: calc(6px + 16 * ((100vw - 320px) / (1440 - 320)));
+    line-height: 12px;
+    padding: 0 0 3% 0;
+}
+.center-text {
+    width: 90%;
+    color: #2F2105;
+    font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 0 0 5% 0;
+}
+.get {
+    width: 90%;
+    height: 70%;
+    background-color: #2F2105;
+    color: #F4AE26;
+    border-radius: 30px;
+    font-size: calc(4px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.get-button {
+    width: 50%;
+    height: 24%;
+    background: none;
+}
+.four-block {
+    width: 100%;
+    height: 895px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5% 0;
+}
+.four-block-conteiner {
+    padding: 20% 0 0 0;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.five-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 190px;
+    background: url(../img/five-coffee.png) 0 0/65% auto no-repeat;
+}
+.five-text-block {
+    width: 44%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.slider {
+    position: absolute;
+    left: 42%;
+    top: 9%;
+    width: 73%;
+    height: 95%;
+}
+.six-block {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe {
+    width: 70%;
+    height: 30%;
+    text-align: center;
+    color: #fff;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0 0 2% 0;
+}
+.subscribe-button {
+    position: absolute;
+    top: 1%;
+    right: 21%;
+    background: #2F2105;
+    color: #fff;
+    border-radius: 32px;
+    width: 23%;
+    height: 45%;
+    font-size: calc(2px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.six-block-container {
+    width: 80%;
+    height: 60%;
+}
+.six-block-content form {
+    width: 65%;
+    height: 20%;
+    position: relative;
+    bottom: 25%;
+    left: 6%;
+    padding: 0;
+}
+.subscribe-email {
+    position: relative;
+    background-color: #fff;
+    border-radius: 32px;
+    width: 80%;
+    height: 100%;
+    color: #787878;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 0 0 0 5%;
+}
+}
+@media only screen and (max-width : 480px){
+  .first-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/bg_img_hero_top.png) 110% -1px/ 45% auto no-repeat, url(../img/bg_img_hero_left.png) 5% 95%/ 60% auto no-repeat;
+    height: 600px;
+    width: 100%;
+    background-color: #F6EBDA;
+}
+.logo {
+  position: relative;
+  left: 12%;
+  width: 30%;
+}
+.search form {
+    width: 90%;
+}
+.header-burger {
+    display: block;
+    position: relative;
+    top: 10%;
+    right: 31%;
+    width: 40px;
+    height: 30%;
+    z-index: 3;
+}
+.header-menu.active {
+    top: 10%;
+    z-index: 12;
+    width: 34%;
+    height: 30%;
+    padding: 5% 0 5% 5%;
+}
+.header-burger span {
+    position: absolute;
+    background-color: #2F2105;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 7px;
+    transition: all 0.3s ease 0s;
+}
+.header-list li a {
+    height: 45%;
+    font-size: calc(15px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #000;
+    font-weight: 400;
+}
+.header-burger.active:before {
+    transform: rotate(45deg);
+    top: 2px;
+}
+.header-burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 20px;
+}
+.search {
+    height: 40%;
+    width: 55%;
+    padding: 2% 0 0px 12%;
+}
+.basket {
+    left: 10%;
+}
+.picture {
+  display: none;
+}
+.text-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3% 0 0 0;
+}
+.text {
+    line-height: 20px;
+    width: 75%;
+    font-size: calc(12px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #787878;
+    font-weight: 400;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+    width: 75%;
+    padding: 0;
+}
+.order {
+    width: 57%;
+    font-size: calc(9px + 16 * ((100vw - 320px) / (1440 - 320)));
+}
+.order:after {
+    content: '';
+    background: url(../img/Group_2.png) 0 0/100% auto no-repeat;
+    position: absolute;
+    right: 9%;
+    top: 11%;
+    width: 19%;
+    height: 36px;
+}
+.menu {
+    background: none;
+    width: 45%;
+    height: 100%;
+    color: #F4AE26;
+    font-size: calc(9px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.coffee-caps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    bottom: 220px;
+    left: 10%;
+    width: 80%;
+    height: 926px;
+    z-index: 2;
+    align-items: center;
+}
+.card {
+    color: #2F2105;
+    font-weight: 600;
+    width: 60%;
+    height: 242px;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 5px rgb(255 255 255 / 70%), 0px 15px 45px 2px rgb(0 0 0 / 20%);
+    border-radius: 8px;
+}
+.third-title {
+    width: 55%;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    height: 100%;
+    color: #2F2105;
+    font-weight: 600;
+    padding: 0 0 3% 0;
+}
+.center-text {
+    width: 90%;
+    color: #2F2105;
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 0 0 5% 0;
+}
+.third-text-about {
+    font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+    line-height: 15px;
+    padding: 0 0 3% 0;
+}
+.third_block {
+    position: relative;
+    top: 39px;
+    width: 100%;
+    height: 213px;
+    background: url(../img/bg-image1.png) 0 0/100% auto no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.cofee-img {
+    width: 40%;
+    position: relative;
+    bottom: 10%;
+    left: 6%;
+}
+.cofee-img img {
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #fff;
+    width: 100%;
+    box-shadow: 0px 2px 10px 1px rgb(0 0 0 / 20%);
+}
+.third-title {
+    width: 55%;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    height: 50%;
+    color: #2F2105;
+    font-weight: 600;
+    padding: 0 0 3% 0;
+}
+.third-text {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3% 0 2% 10%;
+}
+.get-button {
+    width: 60%;
+    height: 60%;
+    background: none;
+}
+.get {
+    width: 90%;
+    height: 70%;
+    background-color: #2F2105;
+    color: #F4AE26;
+    border-radius: 30px;
+    font-size: calc(7px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.four-block {
+    width: 100%;
+    height: 733px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5% 0;
+}
+.plate-stars1 {
+    font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 23px;
+    left: 10%;
+    background-color: #fff;
+    width: 27%;
+    height: 17px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 2px rgb(255 255 255 / 70%);
+    padding: 2.5% 0 0 3%;
+    z-index: 2;
+}
+.plate-stars1:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    left: 55%;
+    top: 5%;
+    width: 20px;
+    height: 32px;
+}
+.five-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    background: url(../img/five-coffee.png) 0 0/80% auto no-repeat;
+}
+.five-title {
+    letter-spacing: 1px;
+    font-size: calc(19px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    color: #000;
+}
+.five-text-block {
+    width: 60%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.five-about {
+    width: 75%;
+    font-size: calc(9px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+    color: #787878;
+    line-height: 18px;
+}
+.slider {
+    position: absolute;
+    left: 62%;
+    top: 2%;
+    width: 51%;
+    height: 104%;
+}
+.testimonial-text {
+    width: 100%;
+    height: 105%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3% 0 3% 5%;
+}
+.name {
+    text-align: left;
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #2F2105;
+    font-weight: 600;
+}
+.testimonial {
+    width: 100%;
+    text-align: left;
+    font-size: calc(9px + 13 * ((100vw - 320px) / (1440 - 320)));
+    color: #2F2105;
+    font-weight: 500;
+}
+.six-block {
+    width: 100%;
+    height: 218px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe {
+    width: 70%;
+    height: 40%;
+    text-align: center;
+    color: #fff;
+    font-size: calc(16px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0 0 2% 0;
+}
+.subscribe-button {
+    position: absolute;
+    top: 6%;
+    right: 21%;
+    background: #2F2105;
+    color: #fff;
+    border-radius: 32px;
+    width: 25%;
+    height: 90%;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+}
+@media only screen and (max-width : 395px){
+.logo {
+  left: 13%;
+    width: 50%;
+}
+.first-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/bg_img_hero_top.png) 110% -1px/ 47% auto no-repeat, url(../img/bg_img_hero_left.png) 11% 118%/ 72% auto no-repeat;
+    height: 510px;
+    width: 100%;
+    background-color: #F6EBDA;
+}
+.header-burger {
+    display: block;
+    position: relative;
+    top: 10%;
+    right: 31%;
+    width: 45px;
+    height: 20%;
+    z-index: 3;
+}
+.header-burger span {
+    position: absolute;
+    background-color: #2F2105;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 3px;
+    transition: all 0.3s ease 0s;
+}
+.search {
+    position: relative;
+    top: 0;
+    left: 9%;
+    background: url(../img/icons_search.png) 7px 53%/12% auto no-repeat;
+    width: 79%;
+    height: 27px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #929292;
+    text-align: center;
+    align-items: center;
+    padding: 1.5% 0 0px 10%;
+    box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 20%);
+}
+.search form {
+    width: 92%;
+}
+.search form input {
+    width: 100%;
+    font-size: calc(11px + 16 * ((100vw - 320px) / (1440 - 320)));
+}
+.basket {
+    left: 12%;
+}
+.coffee-caps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    bottom: 124px;
+    left: 10%;
+    width: 85%;
+    height: 915px;
+    z-index: 2;
+    align-items: center;
+}
+.card {
+    color: #2F2105;
+    font-weight: 600;
+    width: 70%;
+    height: 256px;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 5px rgb(255 255 255 / 70%), 0px 15px 45px 2px rgb(0 0 0 / 20%);
+    border-radius: 8px;
+}
+.plate-stars {
+    font-size: calc(12px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 11%;
+    left: 10%;
+    background-color: #fff;
+    width: 25%;
+    height: 9%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 3px rgb(255 255 255 / 70%);
+    padding: 2.5% 0 0 4%;
+    z-index: 2;
+}
+.plate-stars:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    left: 59%;
+    top: 15%;
+    width: 25px;
+    height: 32px;
+}
+.hot {
+    width: 40%;
+    height: 80%;
+    color: #FFD28F;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FFD28F;
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+    padding: 5% 0 0 10%;
+}
+.cold {
+    width: 45%;
+    height: 80%;
+    color: #FFD28F;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FFD28F;
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+    padding: 5% 0 0 10%;
+}
+.second-block {
+    width: 100%;
+    height: 561px;
+    display: flex;
+    justify-content: center;
+}
+.services {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 38px;
+    text-align: center;
+    align-items: center;
+}
+.touсh-cap:before {
+    content: '';
+    background: url(../img/image.png) 0 0/100% auto no-repeat;
+    position: absolute;
+    bottom: 60%;
+    left: 30%;
+    width: 50%;
+    height: 50%;
+}
+.touсh-cap:after {
+    content: 'there are 20+ coffees for you';
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    font-size: calc(11px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+}
+.car:before {
+    content: '';
+    background: url(../img/food-truck.png) 0 0/100% auto no-repeat;
+    position: absolute;
+    bottom: 60%;
+    left: 28%;
+    width: 50%;
+    height: 50%;
+}
+.car:after {
+    content: 'Choose delivery service';
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    font-size: calc(11px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+}
+.just-cap:before {
+    content: '';
+    background: url(../img/coffee-cup2.png) 0 0/100% auto no-repeat;
+    position: absolute;
+    bottom: 60%;
+    left: 28%;
+    width: 50%;
+    height: 50%;
+}
+.just-cap:after {
+    content: 'Choose delivery service';
+    position: absolute;
+    top: 62%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    font-size: calc(11px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+}
+.cofee-img {
+display: none;
+}
+.center-text {
+    line-height: 17px;
+    width: 90%;
+    color: #2F2105;
+    font-size: calc(12px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    padding: 0 0 5% 0;
+}
+.third-title {
+    width: 55%;
+    font-size: calc(18px + 16 * ((100vw - 320px) / (1440 - 320)));
+    height: 50%;
+    color: #2F2105;
+    font-weight: 600;
+    padding: 0 0 3% 0;
+}
+.third-text {
+    width: 100%;
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 7% 0 2% 5%;
+    align-items: flex-start;
+}
+.third-text-about {
+    font-size: calc(9px + 16 * ((100vw - 320px) / (1440 - 320)));
+    line-height: 15px;
+    padding: 0 0 3% 0;
+}
+.get {
+    width: 90%;
+    height: 80%;
+    background-color: #2F2105;
+    color: #F4AE26;
+    border-radius: 30px;
+    font-size: calc(9px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.get-button {
+    width: 60%;
+    height: 50%;
+    background: none;
+}
+.four-block {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 5% 0;
+}
+.card1 {
+    color: #2F2105;
+    font-weight: 600;
+    width: 95%;
+    height: 95%;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 5px rgb(255 255 255 / 70%), 0px 15px 45px 2px rgb(0 0 0 / 20%);
+    border-radius: 8px;
+}
+.plate-stars1 {
+    font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+    position: relative;
+    top: 22px;
+    left: 10%;
+    background-color: #fff;
+    width: 27%;
+    height: 14px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 2px rgb(255 255 255 / 70%);
+    padding: 2.5% 0 0 3%;
+    z-index: 2;
+}
+.plate-stars1:after {
+    content: '';
+    background: url(../img/akar-icons_star.png) 0 0/60% auto no-repeat;
+    position: absolute;
+    left: 55%;
+    top: 5%;
+    width: 19px;
+    height: 32px;
+}
+.card-buttons1 p {
+    line-height: 15px;
+    width: 70%;
+    font-size: calc(8px + 16 * ((100vw - 320px) / (1440 - 320)));
+    color: #787878;
+    padding: 5% 0 0 5%;
+}
+.buy1 {
+    position: relative;
+    right: 5%;
+    bottom: 0px;
+    background: none;
+    width: 25%;
+}
+.card-coffee1 {
+  width: 40%;
+    font-size: calc(12px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+}
+.bye-coffee1 {
+    font-size: calc(12px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 700;
+}
+.five-block {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 215px;
+    background: url(../img/five-coffee.png) 0 0/100% auto no-repeat;
+}
+.five-text-block {
+    width: 60%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.five-about {
+    width: 95%;
+    font-size: calc(10px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 400;
+    color: #787878;
+    line-height: 15px;
+}
+.five-title {
+    width: 95%;
+    letter-spacing: 1px;
+    font-size: calc(18px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    color: #000;
+}
+.slider {
+    position: absolute;
+    left: 55%;
+    top: 5%;
+    width: 58%;
+    height: 95%;
+}
+.six-block {
+    width: 100%;
+    height: 188px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe {
+    width: 70%;
+    height: 30%;
+    text-align: center;
+    color: #fff;
+    font-size: calc(12px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0 0 2% 0;
+}
+.six-block-content form {
+    width: 65%;
+    height: 15%;
+    position: relative;
+    bottom: 25%;
+    left: 6%;
+    padding: 0;
+}
+.subscribe-button {
+    position: absolute;
+    top: 15%;
+    right: 21%;
+    background: #2F2105;
+    color: #fff;
+    border-radius: 32px;
+    width: 25%;
+    height: 90%;
+    font-size: calc(5px + 16 * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+}
